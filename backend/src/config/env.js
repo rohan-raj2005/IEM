@@ -6,7 +6,7 @@ dotenv.config({ path: path.resolve(__dirname, '../../.env') });
 const config = {
   NODE_ENV: process.env.NODE_ENV || 'development',
   PORT: parseInt(process.env.PORT, 10) || 5000,
-  MONGO_URI: process.env.MONGO_URI || 'mongodb+srv://rohan:ceu1868EYC7JzyWp@backend.zxhq52k.mongodb.net/IEM',
+  MONGO_URI: process.env.MONGO_URI || 'mongodb+srv://rohan:ceu1868EYC7JzyWp@backend.zxhq52k.mongodb.net/IEM?retryWrites=true&w=majority',
   JWT_SECRET: process.env.JWT_SECRET || 'iem_kolkata_admissions_jwt_secret_key_2026',
   ADMIN_EMAIL: process.env.ADMIN_EMAIL || 'admin@gmail.com',
   ADMIN_PASSWORD: process.env.ADMIN_PASSWORD || 'admin123',

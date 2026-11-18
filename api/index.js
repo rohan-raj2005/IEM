@@ -1,3 +1,8 @@
+const dns = require('dns');
+if (dns.setDefaultResultOrder) {
+  dns.setDefaultResultOrder('ipv4first');
+}
+
 const mongoose = require('mongoose');
 const app = require('../backend/src/app');
 const config = require('../backend/src/config/env');
