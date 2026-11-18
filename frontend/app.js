@@ -7,7 +7,9 @@
 // ==========================================================================
 // 1. CONFIGURATION & CONSTANTS
 // ==========================================================================
-const API_BASE_URL = window.location.port === '5000' ? '/api' : 'http://localhost:5000/api';
+const API_BASE_URL = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
+  ? (window.location.port === '5000' ? '/api' : 'http://localhost:5000/api')
+  : '/api';
 const DB_STORAGE_KEY = 'collegehub_admission_db_v2';
 const SESSION_STORAGE_KEY = 'collegehub_admission_session_v2';
 const GMAIL_REGEX = /^[a-zA-Z0-9._%+-]+@gmail\.com$/i;
